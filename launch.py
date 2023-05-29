@@ -1,3 +1,4 @@
+from importlib.machinery import PathFinder
 import os
 import re
 import subprocess
@@ -33,6 +34,7 @@ if env_defined("STEAM_BRANCH"):
 if env_defined("STEAM_BRANCH_PASSWORD"):
     steamcmd.extend(["-betapassword", os.environ["STEAM_BRANCH_PASSWORD"]])
 steamcmd.extend(["validate", "+quit"])
+print(steamcmd)
 subprocess.call(steamcmd)
 
 # Mods

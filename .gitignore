@@ -1,5 +1,6 @@
 # Files
-.env
+.env*
+cba_settings.sqf
 
 # File types
 *.cfg

@@ -13,6 +13,7 @@ services:
       - './configs:/arma3/configs'
       - './mods:/arma3/mods'
       - './servermods:/arma3/servermods'
+      - './userconfig:/arma3/userconfig'
     env_file: .env
     restart: unless-stopped
 volumes:
