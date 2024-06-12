@@ -8,7 +8,6 @@ services:
     network_mode: host
     volumes:
       - arma3root:/arma3
-      - steamcmd:/steamcmd
       - './missions:/arma3/mpmissions'
       - './configs:/arma3/configs'
       - './mods:/arma3/mods'
@@ -18,5 +17,4 @@ services:
     restart: unless-stopped
 volumes:
   arma3root:
-  steamcmd:
 

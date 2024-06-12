@@ -11,7 +11,7 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 
 
 
 def install_mod(id_list):
-    steamcmd = ["/steamcmd/steamcmd.sh"]
+    steamcmd = ["/usr/games/steamcmd"]
     steamcmd.extend(["+force_install_dir", "/arma3"])
     steamcmd.extend(["+login", os.environ["STEAM_USER"], os.environ["STEAM_PASSWORD"]])
     for id in id_list:
