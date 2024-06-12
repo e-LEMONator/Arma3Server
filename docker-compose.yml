@@ -7,9 +7,14 @@ services:
     container_name: arma3
     network_mode: host
     volumes:
+      - arma3root:/arma3
       - './missions:/arma3/mpmissions'
       - './configs:/arma3/configs'
       - './mods:/arma3/mods'
       - './servermods:/arma3/servermods'
+      - './userconfig:/arma3/userconfig'
     env_file: .env
     restart: unless-stopped
+volumes:
+  arma3root:
+

@@ -1,1 +1,17 @@
-.env
+# Files
+.env*
+cba_settings.sqf
+
+# File types
+*.cfg
+*.html
+*.log
+*.Arma3Profile
+
+# Directorys
+configs/profiles/*
+missions/*
+__pycache__/*
+
+# IDE Files
+.vscode/*

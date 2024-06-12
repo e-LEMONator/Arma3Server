@@ -56,7 +56,7 @@ Profiles are saved in `/arma3/configs/profiles`
 | `-v /arma3/mods`              | Mods that will be loaded by clients |
 | `-v /arma3/servermods`        | Mods that will only be loaded by the server |
 | `-e PORT`                     | Port used by the server, (uses PORT to PORT+3)            | 2302 |
-| `-e ARMA_BINARY`              | Arma 3 server binary to use, `./arma3server_x64` for x64   | `./arma3server` |
+| `-e ARMA_BINARY`              | Arma 3 server binary to use   | `./arma3server_x64` |
 | `-e ARMA_CONFIG`              | Config file to load from `/arma3/configs`                 | `main.cfg` |
 | `-e ARMA_PROFILE`             | Profile name, stored in `/arma3/configs/profiles`         | `main` |
 | `-e ARMA_WORLD`               | World to load on startup                                  | `empty` |
@@ -68,7 +68,7 @@ Profiles are saved in `/arma3/configs/profiles`
 | `-e STEAM_PASSWORD`           | Steam password |
 | `-e HEADLESS_CLIENTS`         | Launch n number of headless clients                       | `0` |
 | `-e MODS_LOCAL`               | Should the mods folder be loaded | `true` |
-| `-e MODS_PRESET`              | An Arma 3 Launcher preset to load |
+| `-e MODS_PRESET`              | An Arma 3 Launcher preset to load (relative path, eg: `servermods/preset.html`) |
 
 The Steam account does not need to own Arma 3, but must have Steam Guard disabled.
 
@@ -104,8 +104,15 @@ To use a Creator DLC the `STEAM_BRANCH` must be set to `creatordlc`
 
 ### Workshop
 
-Set the environment variable `MODS_PRESET` to the HTML preset file exported from the Arma 3 Launcher. The path can be local file or a URL. A volume can be created at `/arma3/steamapps/workshop/content/107410` to preserve the mods between containers.
+Set the environment variable `MODS_PRESET` to the HTML preset file exported from the Arma 3 Launcher. The path can be local file or a URL. A volume is created at `/arma3/` to preserve the game file and mods between containers.
 
 `-e MODS_PRESET="my_mods.html"`
+
+or
+
+`-e MODS_PRESET="servermods/my_mods.html"`
+
+or 
+
 
 `-e MODS_PRESET="http://example.com/my_mods.html"`
